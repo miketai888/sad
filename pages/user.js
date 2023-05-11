@@ -21,11 +21,10 @@ export async function getStaticProps() {
         }
     })
     const data = await response.json()
-    console.log(data.response)
     return{
         props:{
             users:data.response,
-        }, revalidate: 30
+        }, revalidate: 7200
     }
 }
 
